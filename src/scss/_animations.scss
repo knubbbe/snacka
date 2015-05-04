@@ -1,0 +1,23 @@
+.view-transition-enter {
+	opacity: .01;
+	transition: opacity .25s ease-in;
+	transition-delay: 1s;
+	
+	&.view-transition-enter-active {
+		opacity: 1;
+	}
+}
+
+.view-transition-leave {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	transition: opacity .25s ease-in;
+	
+	&.view-transition-leave-active {
+		opacity: .01;
+	}
+}

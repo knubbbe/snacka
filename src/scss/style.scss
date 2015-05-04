@@ -1,0 +1,119 @@
+@import "materialize";
+@import "animations";
+
+%input {
+	padding: 10px 15px;
+	border: 3px solid color('light-blue', 'lighten-2');
+}
+
+input {
+	@extend %input;
+	width: 100%;
+}
+
+.btn {
+	background-color: color('light-blue', 'base');
+
+	&:hover {
+		background-color: color('light-blue', 'lighten-2');
+	}
+}
+
+.flash-message {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+	display: block;
+	margin: 0;
+	transform: translateX(-50%);
+
+	span {
+		display: block;
+		padding: 10px 20px;
+	}
+
+	&.error {
+		background-color: color('materialize-red', 'lighten-2');
+		border: 1px solid color('materialize-red', 'lighten-1');
+		border-bottom: 0;
+		color: #fff;
+	}
+	&.success {
+		background-color: color('green', 'lighten-2');
+		border: 1px solid color('green', 'lighten-1');
+		border-bottom: 0;
+		color: #fff;
+	}
+}
+
+.container {
+	max-width: 780px;
+}
+
+nav {
+	background-color: color('light-blue', 'accent-4');
+
+	.nav-wrapper {
+
+		.snacka-logo {
+			font-size: $h5-fontsize;
+		}
+	}
+}
+
+.snacka {
+	> .container {
+		position: relative;
+		margin: 40px auto;
+	}
+}
+.content {
+	display: block;
+	margin: 0 auto;
+}
+
+.snack-list {
+
+	.empty-list {
+		padding: 20px;
+		text-align: center;
+		font-style: italic;
+	}
+
+	.collection-item {
+		.title {
+			color: color('light-blue', 'base');
+			.date {
+				margin-left: 20px;
+				font-size: 12px;
+				font-style: italic;
+				color: color('light-blue', 'lighten-2');
+			}
+		}
+
+		p {
+			padding: 5px;
+		}
+
+		.badge {
+			i {
+				color: color('light-blue', 'darken-1');
+			}
+		}
+
+		.delete {
+			cursor: pointer;
+
+			i {
+				color: color('materialize-red', 'lighten-4');
+			}
+		}
+
+		&:hover {
+			background-color: color('light-blue', 'lighten-5');
+			border-color: color('light-blue', 'lighten-2');
+		}
+	}
+}
+
